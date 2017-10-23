@@ -26,16 +26,18 @@ def code_input () :
             code_commands[i] = line[ : line.find(" ") ]
     
         command_end_index = line.find(" ")
-        print( command_end_index,  line[ command_end_index+1 : line.find(" ", command_end_index-1) ])
-        # if "," in line :
-        #     code_operand1[i] =  line[ command_end_index : line.find(",", command_end_index) ]
-        # else :    
-            
-        #     code_operand1[i] =  line[ command_end_index : line.find(" ", command_end_index) ]
+        if "," in line :
+            code_operand1[i] =  line[ command_end_index+1 : line.find(" ", command_end_index+1)-1 ]
+            command_end_index = line.find(" ", command_end_index+1)
+            code_operand2[i] =  line[ command_end_index+1 :line.find(" ", command_end_index+1) ]
+        else :    
+            code_operand1[i] =   line[ command_end_index+1 : line.find(" ", command_end_index+1)]
 
         i += 1
+    print(code_location)
+    print(code_commands)
     print(code_operand1)
-
+    print(code_operand2)
 
 #Main function
 def main() :
