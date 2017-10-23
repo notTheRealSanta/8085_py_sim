@@ -1,13 +1,15 @@
-class Memory  :
+class Register  :
     
-    A = 0 #accumulator
-    B = 0
-    C = 0
-    D = 0
-    E = 0
-    H = 0
-    L = 0
-    W = 0 #temp register
+    registers = {
+        'A' : 0, #accumulator
+        'B' : 0,
+        'C' : 0,
+        'D' : 0,
+        'E' : 0,
+        'H' : 0,
+        'L' : 0,
+    }
+
 
     flag_register = {
         'S' : 0,

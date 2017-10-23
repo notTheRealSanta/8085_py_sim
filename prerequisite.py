@@ -1,18 +1,8 @@
 
-command_list_def = [
-    "LDA",
-    "STA",
-    "ADD",
-    "SUB",
-    "LXI",
-    "MOV",
-    "HLT",
-    "INX",
-    "DCX",
-    "CMP",
-    "JMP",
-    "JZ",
-    "JNZ",
-    "JC",
-    "JNC",
-]
+def printl(lisy = []) :
+
+    print("\n")
+    for i in range(len(lisy)) :
+        if(lisy[i] != "") :
+            print(i," : ", lisy[i])
+        
